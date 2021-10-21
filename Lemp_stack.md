@@ -68,8 +68,12 @@ $sudo mysql
 
 ![image](https://user-images.githubusercontent.com/55473846/138357199-4e15f096-bff2-43af-bec7-9bee1b2865f1.png)
 
+![image](https://user-images.githubusercontent.com/55473846/138362587-6a05c8da-d3b7-451f-8823-85e7d7961930.png)
 
+INSTALLING PHP
 
+sudo apt install php-fpm php-mysql
 
+![image](https://user-images.githubusercontent.com/55473846/138362738-704794f8-bf35-482a-bc7c-7b3fcd17ba67.png)
 
 
