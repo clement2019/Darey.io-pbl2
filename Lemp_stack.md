@@ -144,6 +144,23 @@ I created a database named example_database and a user named example_user, which
 But first I connect to the MySQL console using the root account:
 sudo mysql
 
+![image](https://user-images.githubusercontent.com/55473846/138364026-762415bd-858f-440e-8841-0c4035d5919a.png)
+
+This gave the example_user user full privileges over the example_database database, while preventing this user from creating or modifying other databases on the server.
+Exit
+I tested if the new user has the proper permissions by logging in to the MySQL console again, this time using the custom user credentials:
+
+![image](https://user-images.githubusercontent.com/55473846/138364140-e859d10d-0cf0-40c6-94d6-8edd09d3e4bd.png)
+
+Notice the -p flag in this command, which will prompt you for the password used when creating the example_user user. After logging in to the MySQL console, confirm that you have access to the example_database database:
+SHOW DATABASES;
+
+![image](https://user-images.githubusercontent.com/55473846/138364253-45992f7a-2290-496d-b17a-449d7764f97c.png)
+
+Insert a few rows of content in the test table. You might want to repeat the next command a few times, using different VALUES:
+mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+![image](https://user-images.githubusercontent.com/55473846/138364352-e4796b52-a7de-49e8-8c88-8ecdaabd1a47.png)
+
 
 
 
