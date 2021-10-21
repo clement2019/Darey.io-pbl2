@@ -109,3 +109,14 @@ sudo unlink /etc/nginx/sites-enabled/default
 When ready, I reloaded Nginx to apply the changes:
 sudo systemctl reload nginx
 
+![image](https://user-images.githubusercontent.com/55473846/138363417-ee9cba7f-8d30-4bed-a1e4-5f8f29a995c4.png)
+
+My new website is now active, but the web root /var/www/projectLEMP is still empty. I created an index.html file in that location so that we can test that my new server block works as expected:
+sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
+
+![image](https://user-images.githubusercontent.com/55473846/138363499-54b41006-7630-4dcb-a6c5-695cd2be7390.png)
+
+
+Now on the browser i tried to open my website URL using IP address:
+ http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/:80
+
