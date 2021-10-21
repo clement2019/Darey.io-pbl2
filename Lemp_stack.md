@@ -161,10 +161,47 @@ Insert a few rows of content in the test table. You might want to repeat the nex
 mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
 ![image](https://user-images.githubusercontent.com/55473846/138364352-e4796b52-a7de-49e8-8c88-8ecdaabd1a47.png)
 
+To confirm that the data was properly entered 
+SELECT * FROM example_database.todo_list;
+I entered some more records into the example database.todo_list  table as show below
 
+![image](https://user-images.githubusercontent.com/55473846/138364518-f8ca539d-b54a-449c-bcfb-1eee1436a913.png)
 
+To confirm that the data was successfully saved to the table, run:
+mysql>  SELECT * FROM example_database.todo_list;
 
+![image](https://user-images.githubusercontent.com/55473846/138364596-307c9d9f-3d6d-40f9-b1ad-3fe0f330d311.png)
+I now created a PHP script that will connect to MySQL and query for my content. Create a new PHP file in the custom web root directory using my preferred editor.:
+nano /var/www/projectLEMP/todo_list.php
+The following PHP script connects to the MySQL database and queries for the content of the todo_list table, displays the results in a list. If there is a problem with the database connection, it will throw an exception.
+I copied this content into the todo_list.php script:
+<?php
+$user = "example_user";
+$password = "password";
+$database = "example_database";
+$table = "todo_list";
 
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+Save and close 
 
+![image](https://user-images.githubusercontent.com/55473846/138364682-5ad7d7b9-3ee2-4b3f-863e-87968bbcb747.png)
+
+I can now access this page in my web browser by visiting the domain name or public IP address configured for my website, followed by /todo_list.php:
+http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/todo_list.php
+I saw a page like this, showing the content i have inserted in the test table
+
+![image](https://user-images.githubusercontent.com/55473846/138364760-21189a0a-4e45-4f28-8408-53f91a5bb1e1.png)
+
+In this Lemp-Stack implementation project I built a web-based flexible foundation for serving PHP websites and applications to visitors, using Nginx as web server and MySQL as database management system.
 
 
