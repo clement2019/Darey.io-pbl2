@@ -94,3 +94,18 @@ sudo nano /etc/nginx/sites-available/projectLEMP
 
 Activate my configuration by linking to the config file from Nginx’s sites-enabled directory:
 sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
+
+![image](https://user-images.githubusercontent.com/55473846/138363184-708d291c-de7e-4135-a526-27608b8222c6.png)
+This tells Nginx to use the configuration next time it is reloaded. I tested my configuration for syntax errors by typing the command below
+sudo nginx -t
+the following was seen 
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+this confirms that my configuration is ok and it can be seen from the screenshot below
+
+![image](https://user-images.githubusercontent.com/55473846/138363269-7b7d2e3a-b0fc-4596-a779-19388457630a.png)
+I also needed to disable default Nginx host that is currently configured to listen on port 80, for this run I ran the following command:
+sudo unlink /etc/nginx/sites-enabled/default
+When ready, I reloaded Nginx to apply the changes:
+sudo systemctl reload nginx
+
