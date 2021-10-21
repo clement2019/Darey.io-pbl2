@@ -203,9 +203,6 @@ To confirm that the data was successfully saved to the table,
 run:
 mysql>  SELECT * FROM example_database.todo_list;
 
-
-![image](https://user-images.githubusercontent.com/55473846/138364596-307c9d9f-3d6d-40f9-b1ad-3fe0f330d311.png)
-
 I now created a PHP script that will connect to MySQL and query for my content. Create a new PHP file in the custom web root directory using my preferred editor.:
 
 nano /var/www/projectLEMP/todo_list.php
