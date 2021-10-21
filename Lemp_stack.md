@@ -35,4 +35,18 @@ As shown below the webserver is running and its shown below
 I can access traffic on port: 80 already configured while TCP port:22 is already configured and open on Ec2 as well in security group. Although it is not advisable to open all port to traffic in production mode but its because this is a test project so for now is allowed. The server is running, and it can be access locally on 0.0.0.0/0 means that any ip address can access the webserver for now.
 ![image](https://user-images.githubusercontent.com/55473846/138355841-3605e7e6-20a6-403c-8cc6-06d0a069db13.png)
 
+CHECKING IF WEBSERVER IS WELL CONFIGURED
+
+I checked to see if the webserver is well configured by checking with default Nginx webserver page as shown below
+
+![image](https://user-images.githubusercontent.com/55473846/138356077-f1fba1e1-4b0c-4b2d-a3e7-da0278c78f3b.png)
+
+I equally checked with the aws ec2 instance public ip address 
+
+http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/ 
+
+to view the Nginx webserver page as shown below and it works
+
+![image](https://user-images.githubusercontent.com/55473846/138356243-df2e6a5b-601b-4247-9f5d-e6cd7dba6b8c.png)
+
 
