@@ -245,5 +245,6 @@ http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/todo_list.php
 I saw a page like this, showing the content i have inserted in the test table
 
 
+![image](https://user-images.githubusercontent.com/55473846/138366295-271db462-5eab-4918-9672-fcd214461147.png)
 
-
+In this Lemp-Stack implementation project I built a web-based flexible foundation for serving PHP websites and applications to visitors, using Nginx as web server and MySQL as database management system.
