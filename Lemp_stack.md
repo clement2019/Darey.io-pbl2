@@ -49,4 +49,27 @@ to view the Nginx webserver page as shown below and it works
 
 ![image](https://user-images.githubusercontent.com/55473846/138356243-df2e6a5b-601b-4247-9f5d-e6cd7dba6b8c.png)
 
+INSTALLING MYSQL
+
+Now I have my Ngnix web server up and running, I now need to install a Database Management System (DBMS) to be able to store and manage data for my site in a relational database. MySQL is a popular relational database management system used within PHP environments; this I will use in my project.
+I ran this command 
+$ sudo apt install mysql-server
+
+![image](https://user-images.githubusercontent.com/55473846/138356868-81ef22b3-ff08-4a01-aed5-69adb5f98073.png)
+
+I ran the following command to secure mysql and remove some default settings
+
+$ sudo mysql_secure_installation
+
+![image](https://user-images.githubusercontent.com/55473846/138357007-7e2a401f-ebbe-4062-af5e-3236e75d033d.png)
+
+I ran this command to be able to access mysql
+$sudo mysql
+
+![image](https://user-images.githubusercontent.com/55473846/138357199-4e15f096-bff2-43af-bec7-9bee1b2865f1.png)
+
+
+
+
+
 
