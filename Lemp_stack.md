@@ -234,7 +234,7 @@ try {
 Save and close 
 
 
-![image](https://user-images.githubusercontent.com/55473846/138364682-5ad7d7b9-3ee2-4b3f-863e-87968bbcb747.png)
+![image](https://user-images.githubusercontent.com/55473846/138365830-60a7f776-d238-4e8a-ad1c-e95ac297b7a2.png)
 
 
 I can now access this page in my web browser by visiting the domain name or public IP address configured for my website, followed by /todo_list.php:
@@ -243,7 +243,7 @@ http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/todo_list.php
 
 I saw a page like this, showing the content i have inserted in the test table
 
-![image](https://user-images.githubusercontent.com/55473846/138364760-21189a0a-4e45-4f28-8408-53f91a5bb1e1.png)
+![image](https://user-images.githubusercontent.com/55473846/138365732-86dc24cd-3e60-49c1-b2f8-b27ccafed71f.png)
 
 In this Lemp-Stack implementation project I built a web-based flexible foundation for serving PHP websites and applications to visitors, using Nginx as web server and MySQL as database management system.
 
