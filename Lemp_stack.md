@@ -119,4 +119,35 @@ sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/met
 
 Now on the browser i tried to open my website URL using IP address:
  http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/:80
+ 
+ ![image](https://user-images.githubusercontent.com/55473846/138363618-48c41710-c35c-4f28-90a4-0d96e22c6757.png)
+ 
+ This above is now my temporary landing page for the application until i set up an index.php file to replace it. Once that is done I removed or rename the index.html file from my document root, as it would take precedence over an index.php file by default.
+TESTING PHP WITH NGINX
+My LEMP stack project is now completely set up.
+Meaning that at this point my LAMP stack is completely installed and fully operational., I tested it to validate that Nginx can correctly hand .php files off to the PHP processor.
+sudo nano /var/www/projectLEMP/info.php
+I did this by creating a test PHP file in my document root. Open a new file called info.php within my document root in the nano text 
+![image](https://user-images.githubusercontent.com/55473846/138363739-ca1d5e5e-6167-4957-8939-6db4d1ec03eb.png)
+
+I now accessed this page in my web browser by visiting the domain name or public IP address i set up in my Nginx configuration file, followed by /info.php:
+http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/info.php
+
+![image](https://user-images.githubusercontent.com/55473846/138363858-b2cfeb10-fa3f-47c6-ae5a-1e13a5095927.png)
+
+As this page contains sensitive information, I ran the following command to remove it
+sudo rm /var/www/projectLEMP/info.php
+RETRIEVING DATA FROM MYSQL DATABASE WITH PHP 
+
+In this step i created a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it
+I created a database named example_database and a user named example_user, which can be replaced with different names and different values latter if I so desire.
+But first I connect to the MySQL console using the root account:
+sudo mysql
+
+
+
+
+
+
+
 
