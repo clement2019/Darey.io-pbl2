@@ -68,7 +68,6 @@ $sudo mysql
 
 ![image](https://user-images.githubusercontent.com/55473846/138357199-4e15f096-bff2-43af-bec7-9bee1b2865f1.png)
 
-![image](https://user-images.githubusercontent.com/55473846/138362587-6a05c8da-d3b7-451f-8823-85e7d7961930.png)
 
 INSTALLING PHP
 
@@ -76,4 +75,22 @@ sudo apt install php-fpm php-mysql
 
 ![image](https://user-images.githubusercontent.com/55473846/138362738-704794f8-bf35-482a-bc7c-7b3fcd17ba67.png)
 
+CONFIGURING NGINX TO USE PHP PROCESSOR
+I now have my PHP components installed. Next, i will configure Nginx to use them.
+When using the Nginx web server, we can create server blocks (like virtual hosts in Apache) to encapsulate configuration details and host more than one domain on a single server. In this guide, we will use projectLEMP as an example domain name.
+On Ubuntu 20.04, Nginx has one server block enabled by default and is configured to serve documents out of a directory at /var/www/html. While this works well for a single site, it can become difficult to manage if am hosting multiple sites. Instead of modifying /var/www/html, i createed a directory structure within /var/www for the  projectLEMP  website, leaving /var/www/html in place as the default directory to be served if a client request does not match any other sites.
 
+I created the root web directory for domain as follows:
+
+sudo mkdir /var/www/projectLEMP
+
+I now assign ownership to this user as follows using the following command
+sudo chown -R $USER:$USER /var/www/projectLEMP
+
+I then opened a new configuration file in Nginx’s sites-available directory using my preferred command-line editor. Here, i used nano:
+sudo nano /etc/nginx/sites-available/projectLEMP
+
+![image](https://user-images.githubusercontent.com/55473846/138363007-5eda0516-d453-4941-84d5-962eaaea556c.png)
+
+Activate my configuration by linking to the config file from Nginx’s sites-enabled directory:
+sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
