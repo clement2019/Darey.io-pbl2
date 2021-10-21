@@ -230,7 +230,6 @@ try {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
-
 Save and close 
 
 
@@ -243,7 +242,9 @@ http://ec2-18-130-125-19.eu-west-2.compute.amazonaws.com/todo_list.php
 
 I saw a page like this, showing the content i have inserted in the test table
 
+
 ![image](https://user-images.githubusercontent.com/55473846/138365732-86dc24cd-3e60-49c1-b2f8-b27ccafed71f.png)
+
 
 In this Lemp-Stack implementation project I built a web-based flexible foundation for serving PHP websites and applications to visitors, using Nginx as web server and MySQL as database management system.
 
